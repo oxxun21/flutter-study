@@ -11,7 +11,19 @@ void main() {
     // runApp에 들어가는 첫번째 값은 무조건 MaterialApp
     // MaterialApp 바로 아래에는 Scaffold(기본구조 생성) 고정
     MaterialApp(
-      home: Scaffold(body: Center(child: Text('text'))),
+      debugShowMaterialGrid: false, // 디버그 띠 제거
+      home: Scaffold(
+        backgroundColor: Colors.black54,
+        body: Center(
+          child: Text('text', style: TextStyle(color: Colors.white)),
+        ),
+      ),
     ),
   );
 }
+
+// 노란 밑줄: lint -> 무시 가능
+// MaterialApp, Scaffold, Center, Text 등등 화면에 보여주는 요소들은 "위젯"이라 부름
+
+// dart formate은 , 를 기준으로 자동 정렬을 해줌
+// -> command + option + l 로 지정해둠
